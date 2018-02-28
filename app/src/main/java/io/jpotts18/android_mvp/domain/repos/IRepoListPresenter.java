@@ -5,4 +5,5 @@ package io.jpotts18.android_mvp.domain.repos;
  */
 public interface IRepoListPresenter {
     public void loadCommits(String username);
+    void clearSubscriptions();
 }

@@ -50,6 +50,12 @@ public class RepoListFragment extends Fragment implements IRepoListView {
     }
 
     @Override
+    public void onStop() {
+        super.onStop();
+        presenter.clearSubscriptions();
+    }
+
+    @Override
     public void onReposLoadedSuccess(List<Repo> list, Response response) {
         listView.setAdapter(new RepoAdapter(getActivity(), list));
     }

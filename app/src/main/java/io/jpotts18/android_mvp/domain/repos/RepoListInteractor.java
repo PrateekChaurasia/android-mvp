@@ -75,6 +75,11 @@ public class RepoListInteractor {
 //        call.enqueue(this);
     }
 
+    public void clearSubscriptions(){
+        if (mCompositeDisposable != null && !mCompositeDisposable.isDisposed()) {
+            mCompositeDisposable.dispose();
+        }
+    }
 
    /* @Override
     public void onResponse(Call<List<Repo>> call, Response<List<Repo>> response) {

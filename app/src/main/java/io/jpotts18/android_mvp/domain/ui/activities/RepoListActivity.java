@@ -54,6 +54,12 @@ public class RepoListActivity extends ActionBarActivity implements IRepoListView
     }
 
     @Override
+    protected void onStop() {
+        super.onStop();
+        presenter.clearSubscriptions();
+    }
+
+    @Override
     public void onReposLoadedSuccess(List<Repo> list, Response response) {
         listView.setAdapter(new RepoAdapter(this, list));
     }

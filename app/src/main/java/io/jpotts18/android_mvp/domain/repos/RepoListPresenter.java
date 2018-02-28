@@ -26,6 +26,11 @@ public class RepoListPresenter implements IRepoListPresenter, OnRepoInteractorFi
     }
 
     @Override
+    public void clearSubscriptions() {
+        interactor.clearSubscriptions();
+    }
+
+    @Override
     public void onNetworkSuccess(List<Repo> list, Response response) {
         view.onReposLoadedSuccess(list, response);
     }
