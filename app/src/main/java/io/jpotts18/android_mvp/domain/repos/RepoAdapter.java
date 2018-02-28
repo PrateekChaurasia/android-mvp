@@ -12,16 +12,17 @@ import java.util.List;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import io.jpotts18.android_mvp.domain.models.Repo;
+import io.jpotts18.android_mvp.domain.models.User;
 
 /**
  * Created by jpotts18 on 5/12/15.
  */
 public class RepoAdapter extends BaseAdapter {
 
-    private List<Repo> list;
+    private List<User> list;
     private Context context;
 
-    public RepoAdapter(Context context, List<Repo> list) {
+    public RepoAdapter(Context context, List<User> list) {
         this.list = list;
         this.context = context;
     }

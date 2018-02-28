@@ -14,6 +14,7 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 import io.jpotts18.android_mvp.R;
 import io.jpotts18.android_mvp.domain.models.Repo;
+import io.jpotts18.android_mvp.domain.models.User;
 import io.jpotts18.android_mvp.domain.repos.IRepoListView;
 import io.jpotts18.android_mvp.domain.repos.RepoAdapter;
 import io.jpotts18.android_mvp.domain.repos.RepoListPresenter;
@@ -60,7 +61,7 @@ public class RepoListActivity extends ActionBarActivity implements IRepoListView
     }
 
     @Override
-    public void onReposLoadedSuccess(List<Repo> list, Response response) {
+    public void onReposLoadedSuccess(List<User> list, Response response) {
         listView.setAdapter(new RepoAdapter(this, list));
     }
 
